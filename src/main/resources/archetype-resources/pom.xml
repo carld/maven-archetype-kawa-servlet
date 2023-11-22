@@ -65,13 +65,18 @@
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-	  <version>3.4.0</version>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.opoo.maven</groupId>
+          <artifactId>tomcat9-maven-plugin</artifactId>
+          <version>3.0.1</version>
         </plugin>
 
         <plugin>
           <groupId>com.github.arvyy</groupId>
           <artifactId>kawa-maven-plugin</artifactId>
-	  <version>0.0.8</version>
+          <version>0.0.8</version>
 	  <configuration>
 	    <compileCommand>
 		<str>java</str>
