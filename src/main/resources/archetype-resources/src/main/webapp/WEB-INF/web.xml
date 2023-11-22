@@ -1,12 +1,12 @@
 <web-app>
   <display-name>Archetype Created Kawa Servlet</display-name>
   <servlet>
-    <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>hello</servlet-class>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>main</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>HelloServlet</servlet-name>
+    <servlet-name>MainServlet</servlet-name>
     <url-pattern>/hello</url-pattern>
   </servlet-mapping>
 </web-app>

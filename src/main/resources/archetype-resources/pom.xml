@@ -69,15 +69,15 @@
 	  <configuration>
 	    <compileCommand>
 		<str>java</str>
-		<str>-Dkawa.import.path=@KAWAIMPORT@SEPARATOR@PROJECTROOT/src/main/webapp/${groupId}/WEB-INF/classes</str>
+		<str>-Dkawa.import.path=@KAWAIMPORT@SEPARATOR@PROJECTROOT/src/main/${groupId}/scheme</str>
 		<str>kawa.repl</str>
 		<str>--target</str>
 		<str>6</str>
 		<str>--servlet</str>
 		<str>-d</str>
-		<str>@PROJECTROOT/src/main/webapp/${groupId}/WEB-INF/classes</str>
+		<str>@PROJECTROOT/src/main/webapp/WEB-INF/classes/${groupId}</str>
 		<str>-C</str>
-		<str>@PROJECTROOT/src/main/webapp/${groupId}/WEB-INF/classes/main.scm</str>
+		<str>@PROJECTROOT/src/main/${groupId}/scheme/main.scm</str>
 	    </compileCommand>
 	  </configuration>
           <extensions>true</extensions>
