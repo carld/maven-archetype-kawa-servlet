@@ -1,4 +1,4 @@
-(module-name hello)
+(module-name main)
 
 (require guenchi.json)
 
