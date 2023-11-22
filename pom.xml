@@ -6,7 +6,7 @@
 
   <groupId>com.github.carld</groupId>
   <artifactId>maven-archetype-kawa-servlet</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <packaging>maven-archetype</packaging>
 
   <name>Archetype - maven-archetype-kawa-servlet</name>
