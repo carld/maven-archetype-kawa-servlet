@@ -24,7 +24,6 @@ under the License.
 
   <groupId>com.github.carld</groupId>
   <artifactId>maven-archetype-kawa-servlet</artifactId>
-  <packaging>maven-archetype</packaging>
   <version>0.0.1</version>
 
   <name>Maven Kawa Servlet Archetype</name>
