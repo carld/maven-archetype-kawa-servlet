@@ -93,7 +93,7 @@
 		<str>-Dkawa.import.path=@KAWAIMPORT@SEPARATOR@PROJECTROOT/src/main/scheme</str>
 		<str>kawa.repl</str>
 		<str>--target</str>
-		<str>6</str>
+		<str>1.7</str>
 		<str>--servlet</str>
 		<str>-d</str>
 		<str>@PROJECTROOT/src/main/webapp/WEB-INF/classes</str>
