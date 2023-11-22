@@ -33,5 +33,9 @@ under the License.
     <fileSet filtered="false" packaged="false">
       <directory>scripts</directory>
     </fileSet>
+    <fileSet filtered="true" packaged="false">
+      <directory/>
+      <include>README.md</include>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>
