@@ -24,7 +24,7 @@ under the License.
   name="${artifactId}">
 
   <fileSets>
-    <fileSet filtered="true" packaged="true">
+    <fileSet filtered="true" packaged="false">
       <directory>src/main/webapp</directory>
     </fileSet>
     <fileSet filtered="true" packaged="false">
