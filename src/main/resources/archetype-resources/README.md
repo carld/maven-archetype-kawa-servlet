@@ -43,26 +43,34 @@ for the kawa-maven-plugin. For example,
 
 ## Tomcat deployment
 
-The tomcat9-maven-plugin requires configuration for tomcat user and password, in maven settings.xml:
+The tomcat9-maven-plugin requires configuration for tomcat user and password, in maven settings.xml,
+ensure that the <id> value matches the <server> value in the tomcat9-maven-plugin <configuration>.
+
+In the ~/.m2/settings.xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <settings >
       <servers>
         <server>
-          <id>apache.snapshots.https</id>
-          <username>robot</username>
-          <password>robot</password>
+          <id>tomcat-server</id>
+          <username>maven</username>
+          <password>maven</password>
         </server>
       </servers>
     </settings>
 
-The user will need to have been added to tomcat-users.xml, with the manager-script role:
+In the pom.xml
 
-    <user username="robot" password="robot" roles="manager-script"/>
+    <configuration>
+      <server>tomcat-server</server>
+      <url>http://localhost:8080/manager/text</url>
+    </configuration>
+
+The user will need to have been added to tomcat-users.xml
+
+    <user username="maven" password="maven" roles="manager-script"/>
 
 Changes to this file may not be observed until tomcat is restarted:
 
     sudo systemctl restart tomcat9
-
-
 
