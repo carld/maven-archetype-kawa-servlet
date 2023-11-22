@@ -30,5 +30,8 @@ under the License.
     <fileSet filtered="true" packaged="false">
       <directory>src/main/scheme</directory>
     </fileSet>
+    <fileSet filtered="false" packaged="false">
+      <directory>scripts</directory>
+    </fileSet>
   </fileSets>
 </archetype-descriptor>
