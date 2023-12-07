@@ -13,7 +13,6 @@
 
   (import (kawa base))
   (import (kawa regex))
-  (import (gateway dispatch-table))
   (import (misc))
   (import (srfi 1))
 
