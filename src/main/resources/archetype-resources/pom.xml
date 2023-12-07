@@ -29,6 +29,11 @@
       <version>2.5</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>8.2.0</version>
+    </dependency>
   </dependencies>
   <build>
     <pluginManagement>
@@ -70,8 +75,8 @@
         <plugin>
           <groupId>org.opoo.maven</groupId>
           <artifactId>tomcat9-maven-plugin</artifactId>
-	  <version>3.0.1</version>
-	  <configuration>
+          <version>3.0.1</version>
+          <configuration>
             <!-- 
 	         Ensure that tomcat-users.xml in the tomcat installation is
                  configured with a user that has a manager-script role, and,
@@ -82,29 +87,28 @@
             <url>http://localhost:8080/manager/text</url>
           </configuration>
         </plugin>
-
         <plugin>
           <groupId>com.github.arvyy</groupId>
           <artifactId>kawa-maven-plugin</artifactId>
           <version>0.0.8</version>
-	  <configuration>
-	    <compileCommand>
-		<str>java</str>
-		<str>-Dkawa.import.path=@KAWAIMPORT@SEPARATOR@PROJECTROOT/src/main/scheme</str>
-		<str>kawa.repl</str>
-		<str>--target</str>
-		<str>1.7</str>
-		<str>--servlet</str>
-		<str>-d</str>
-		<str>@PROJECTROOT/src/main/webapp/WEB-INF/classes</str>
-		<str>-C</str>
-		<str>@PROJECTROOT/src/main/scheme/main.scm</str>
-		<!--
+          <configuration>
+            <compileCommand>
+              <str>java</str>
+              <str>-Dkawa.import.path=@KAWAIMPORT@SEPARATOR@PROJECTROOT/src/main/scheme</str>
+              <str>kawa.repl</str>
+              <str>--target</str>
+              <str>1.7</str>
+              <str>--servlet</str>
+              <str>-d</str>
+              <str>@PROJECTROOT/src/main/webapp/WEB-INF/classes</str>
+              <str>-C</str>
+              <str>@PROJECTROOT/src/main/scheme/main.scm</str>
+              <!--
                    Kawa scheme files can be added for compilation here,
 		   or otherwise compiled by being required in main.scm.
 		-->
-	    </compileCommand>
-	  </configuration>
+            </compileCommand>
+          </configuration>
           <extensions>true</extensions>
           <executions>
             <!--

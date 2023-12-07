@@ -21,9 +21,7 @@
 ;  SOFTWARE.
 
 
-(module-name guenchi.json)
-
-;(library (json json)
+(define-library (guenchi json)
   (export
     string->json
     json->string
@@ -33,8 +31,8 @@
     json-push
     json-reduce
   )
-  #;(import
-    (scheme))
+  (import
+    (kawa base))
  
  
   (define vector->alist		
@@ -383,4 +381,4 @@
       ((_ j v1 v2 ... p) (json-reduce j v1 (lambda (x y) (json-reduce y v2 ... (lambda (n m)(p (cons (car x) n) m))))))))
            
                 
-;)
+)

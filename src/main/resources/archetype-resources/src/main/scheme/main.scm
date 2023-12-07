@@ -1,21 +1,27 @@
-(module-name main)
+(module-extends servlet)
 
-(require guenchi.json)
+(import (gateway servlet))
+(import (gateway routing))
+(import (gateway wsgi))
+(import (gateway middleware))
+(import (kawa base))
 
-(response-header "Content-Type" "application/json")
+(define router-app
 
-(json->string `(("key1" . "value2")("key2" . "value2")("key3" . "value3") ) )
+  (make-router-app
 
-;(cond-expand
-; (in-servlet
-;   (require 'servlets)
-;   (format "[servlet-context: ~s]" (current-servlet-context)))
-; (else
-;   "[Not in a servlet]"))
-;
-;#<p>Hello,
-;    <b>&(request-remote-host)</b>!
-;   <h2>&(request-method)</h2>
-;</p>
+	'()  ; make-router-app is a lambda ( routes . rest ), the first argument is a list
 
 
+   `(get "^.*/hello/world$"
+	 ,(lambda (uri params)
+	    `(200
+	      ((Content-Type . "text/plain"))
+	      "Hello world!")))
+
+   ))
+
+; register the new WSGI compliant app
+(*app* (middleware/stack
+	middleware+logging
+	router-app))
