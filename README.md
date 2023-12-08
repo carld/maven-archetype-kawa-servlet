@@ -1,5 +1,7 @@
 # Maven Archetype for Kawa Servlet
 
+The archetype generates a project containing boilerplate code for a Kawa Scheme web application.
+
 To install this archetype locally,
 
     mvn install # archetype:update-local-catalog
